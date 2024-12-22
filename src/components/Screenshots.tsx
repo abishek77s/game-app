@@ -1,5 +1,6 @@
 import { SimpleGrid, Image } from "@chakra-ui/react";
 import useScreenshots from "../hooks/useScreenshots";
+import getCroppedImage from "../services/image-url";
 
 interface Props {
   gameId: number;
@@ -13,7 +14,11 @@ const Screenshots = ({ gameId }: Props) => {
   return (
     <SimpleGrid marginY={10} columns={{ lg: 2, sm: 1 }} spacing={2}>
       {data?.results.map((s) => (
-        <Image key={s.id} src={s.image} />
+        <Image
+          borderRadius={8}
+          key={s.id}
+          src={getCroppedImage(s.image, "wx")}
+        />
       ))}
     </SimpleGrid>
   );
