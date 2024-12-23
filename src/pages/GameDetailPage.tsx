@@ -5,7 +5,7 @@ import ExpandableText from "../components/ExpandableText";
 import GameAttributes from "../components/GameAttributes";
 import GameTrailer from "../components/GameTrailer";
 import Screenshots from "../components/Screenshots";
-import BackIcon from "../assets/backIcon";
+import BackIcon from "../assets/BackIcon";
 
 const GameDetailPage = () => {
   const { slug } = useParams();
